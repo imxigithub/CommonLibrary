@@ -4,18 +4,18 @@ import android.content.Context;
 import android.widget.Toast;
 
 public class ToastUtil {
-	
-	private Toast mToast;
-	private Context mContext;
-	
-	public ToastUtil(Context context){
-		mContext = context;
-	}
-	
+
+    private Toast mToast;
+    private Context mContext;
+
+    public ToastUtil(Context context) {
+        mContext = context;
+    }
+
     public Toast getSingletonToast(int resId) {
         if (mToast == null) {
             mToast = Toast.makeText(mContext, resId, Toast.LENGTH_SHORT);
-        }else{
+        } else {
             mToast.setText(resId);
         }
         return mToast;
@@ -24,7 +24,7 @@ public class ToastUtil {
     public Toast getSingletonToast(String text) {
         if (mToast == null) {
             mToast = Toast.makeText(mContext, text, Toast.LENGTH_SHORT);
-        }else{
+        } else {
             mToast.setText(text);
         }
         return mToast;
@@ -33,7 +33,7 @@ public class ToastUtil {
     public Toast getSingleLongToast(int resId) {
         if (mToast == null) {
             mToast = Toast.makeText(mContext, resId, Toast.LENGTH_LONG);
-        }else{
+        } else {
             mToast.setText(resId);
         }
         return mToast;
@@ -42,12 +42,12 @@ public class ToastUtil {
     public Toast getSingleLongToast(String text) {
         if (mToast == null) {
             mToast = Toast.makeText(mContext, text, Toast.LENGTH_LONG);
-        }else{
+        } else {
             mToast.setText(text);
         }
         return mToast;
-    }	
-	
+    }
+
     public Toast getToast(int resId) {
         return Toast.makeText(mContext, resId, Toast.LENGTH_SHORT);
     }
@@ -63,7 +63,7 @@ public class ToastUtil {
     public Toast getLongToast(String text) {
         return Toast.makeText(mContext, text, Toast.LENGTH_LONG);
     }
-    
+
     public void showToast(int resId) {
         getToast(resId).show();
     }
@@ -79,7 +79,7 @@ public class ToastUtil {
     public void showLongToast(String text) {
         getLongToast(text).show();
     }
-    
+
     public void showSingletonToast(int resId) {
         getSingletonToast(resId).show();
     }

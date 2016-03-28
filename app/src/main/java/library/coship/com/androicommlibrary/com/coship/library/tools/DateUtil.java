@@ -42,6 +42,5 @@ public class DateUtil {
 		
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format,Locale.CHINA);
 		return simpleDateFormat.format(new Date(System.currentTimeMillis()));
-		
-	}	
+	}
 }

@@ -12,8 +12,8 @@ import android.R.integer;
 public class MD5Util {
 	
 	private static  String hexdigital[] = { "0", "1", "2", "3", "4", "5", "6",  "7", "8", "9", "a", "b", "c", "d", "e", "f" };
-	
-	/**
+
+	 /**
 	 * 获取文本的MD5
 	 * @param value
 	 * @return
@@ -45,10 +45,14 @@ public class MD5Util {
 		}
 		return stringBuilder.toString();
 	}
-	
-	
+
+	/**
+	 * 获取文件的md5
+	 * @param is
+	 * @return
+	 */
 	public static String getStreamMD5(InputStream is){
-		
+
 		byte[]buff = new byte[8192];
 		String streamMD5 = "";
 		try {

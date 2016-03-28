@@ -158,4 +158,13 @@ public class BitmapUtil {
     		return result;
     }
 
+
+    /**
+     * 拍照保存文件
+     */
+
+    /**
+     * 从文件中选取照片
+     */
+
 }

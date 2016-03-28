@@ -72,12 +72,12 @@ public class ShellUtil {
                 successResult = new BufferedReader(new InputStreamReader(process.getInputStream()));
                 errorResult = new BufferedReader(new InputStreamReader(process.getErrorStream()));
                 String s;
-                while ((s = successResult.readLine()) != null) {
-                    successMsg.append(s);
-                }
-                while ((s = errorResult.readLine()) != null) {
-                    errorMsg.append(s);
-                }
+                    while ((s = successResult.readLine()) != null) {
+                        successMsg.append(s);
+            }
+            while ((s = errorResult.readLine()) != null) {
+                errorMsg.append(s);
+            }
             }
         } catch (IOException e) {
             e.printStackTrace();
